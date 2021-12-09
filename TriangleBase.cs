@@ -9,10 +9,12 @@ namespace UL.TriangleCheck
         // is equilateral or isosceles or scalene
         public static string CheckTriangle(int x, int y, int z)
         {
-
+            // Check for error 
+            if (x + y <= z || x + z <= y || z + y <= x)
+                return "Error";
             // Check for equilateral triangle
             if (x == y && y == z)
-                return " ";
+                return "Equilateral Triangle";
             //  Console.WriteLine("Equilateral Triangle");
 
             // Check for isosceles triangle
